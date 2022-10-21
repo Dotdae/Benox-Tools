@@ -1,0 +1,201 @@
+/* HEADER STYLE */
+
+.header-navigation{
+
+  display: flex;
+  justify-content: space-between;
+  background-color: #64A6BD;
+
+}
+
+/* LOGO STYLE */
+
+
+.logo-container{
+
+  display: flex;
+  height: 100px;
+
+}
+
+.logo-container img{
+
+  width: 95px;
+  height: 95px;
+
+}
+
+.logo-container p{
+
+  font-size: 28px;
+  font-weight: 700;
+  margin-left: 20px;
+  line-height: 3.5;
+  color: #FFF;
+
+}
+
+/* RIGHT NAV */
+
+
+.navigation-menu{
+
+  display: flex;
+  line-height: 6;
+  list-style: none;
+
+}
+
+.navigation-menu li{
+
+  margin-right: 30px;
+
+}
+
+.navigation-menu a{
+
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFF;
+  text-decoration: none;
+
+}
+
+/* TAG ANIMATION */
+
+.navigation-menu a::after{
+
+  content: '';
+  display: block;
+  margin-top: -30px;
+  width: 0;
+  height: 3px;
+  background: #A5CAD2;
+  transition: width .3s;
+
+}
+
+
+.navigation-menu a:hover::after{
+
+  width: 100%;
+
+}
+
+/* MAIN CONTAINER */
+
+.main-login-container{
+
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 500px;
+  margin-top: 150px;
+
+}
+
+.main-login-container h1{
+
+  text-align:center;
+  padding-bottom: 15px;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  border-image-slice: 1;
+
+}
+
+
+.main-login-container a{
+
+  color: #4991AB;
+  text-decoration: none;
+
+}
+
+.main-login-container a:hover{
+
+  text-decoration: underline;
+
+}
+
+/* INPUT STYLE */
+
+.form-group{
+
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 30px;
+  width: 30%;
+
+}
+
+.form-field{
+
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #9b9b9b;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder{
+
+    color: transparent;
+
+  }
+
+  &:placeholder-shown ~ .form-label{
+
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+
+  }
+
+}
+
+.form-label{
+
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+
+}
+
+.form-field:focus{
+
+  ~.form-label{
+
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+
+  }
+
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+
+}
+
+.form-field{
+
+  &:required, &:invalid{
+    box-shadow: none;
+  }
+
+}
